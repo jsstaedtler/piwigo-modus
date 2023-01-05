@@ -94,10 +94,14 @@
 </dl>
 {if isset($U_LOGIN)}
 <dl style="float:right;margin-top:3px">
-	<dt style="font-size:100%;font-weight:normal;padding-left:15px{*to avoid loosing hover*}"><a href="{$U_LOGIN}" rel=nofollow>{'Login'|@translate}</a></dt>
+	{***** Change begins here *****}
+	{*<dt style="font-size:100%;font-weight:normal;padding-left:15px{*to avoid loosing hover* }"><a href="{$U_LOGIN}" rel=nofollow>{'Login'|@translate}</a></dt>*}
+	{***** Change ends here *****}
 	<dd style="right:0">
 		<ul>
-		<li><a href="{$U_LOGIN}" rel="nofollow">{'Login'|@translate}</a></li>
+		{***** Change begins here *****}
+		{* <li><a href="{$U_LOGIN}" rel="nofollow">{'Login'|@translate}</a></li> *}
+		{***** Change ends here *****}
 		{if isset($U_REGISTER)}
 		<li><a href="{$U_REGISTER}" title="{'Create a new account'|@translate}" rel="nofollow">{'Register'|@translate}</a></li>
 		{/if}
@@ -135,12 +139,14 @@
 {/if}
 {if isset($U_LOGOUT)}
 <dl style="float:right;margin-top:3px">
-	<dt style="font-size:100%;font-weight:normal">
-	{if isset($USERNAME)}{'Hello'|@translate} {if isset($U_PROFILE)}<a href="{$U_PROFILE}">{/if}{$USERNAME}{if isset($U_PROFILE)}</a>{/if} ! &nbsp;{/if}
-	<a href="{$U_LOGOUT}">{'Logout'|@translate}</a>
-	{if isset($U_PROFILE)}
+	{***** Begin changes *****}
+	<dt> {* style="font-size:100%;font-weight:normal"> *}
+	{***** End changes *****}
+	{if isset($USERNAME)}{*'Hello'|@translate*}{'Adult-only content enabled'} {*if isset($U_PROFILE)}<a href="{$U_PROFILE}">{/if}{$USERNAME}{if isset($U_PROFILE)}</a>{/if*} | {/if}
+	<a href="{$U_LOGOUT}">{*'Logout'|@translate*}{'Disable'} &nbsp;</a>
+	{*if isset($U_PROFILE)}
 	<a id="mbProfile" href="{$U_PROFILE}" title="{'customize the appareance of the gallery'|@translate}">{'Customize'|@translate}</a>
-	{/if}
+	{/if*}
 	{if isset($U_ADMIN)}
 	<a href="{$U_ADMIN}" title="{'available for administrators only'|@translate}">{'Admin'|@translate}</a>
 	{/if}
