@@ -17,6 +17,32 @@
 </a>
 {/strip}</li>
 {/foreach}
+
+
+{*** Custom stuff begins ***}
+{* If user is logged out, display a blurred thumbnail for the Adult-Only album *}
+{if isset($U_LOGIN)}
+<li>{strip}
+<a href="plugins/adult_content/charte.php">
+	<img class=albImg{$item.MODUS_STYLE} src="i/blurredcover.jpg" width=400 height=400 style="width:100%;max-height:none;" alt="Adult-Only">
+	<div class=albLegend>
+		<h4>Adult-Only</h4>
+		{*
+		{if !empty($item.icon_ts)}<div class=albLegendRight><span class=albSymbol title="{if $item.icon_ts.IS_CHILD_DATE}{'Recent albums'|@translate} {$item.icon_ts.TITLE}">✻{else}{'Recent photos'|@translate} {$item.icon_ts.TITLE}">✽{/if}</span></div>{/if}
+		<div>
+			{if $item.nb_images}{$item.nb_images|@translate_dec:'%d photo':'%d photos'}{if $item.nb_categories}, {/if}{/if}
+			{if $item.nb_categories}
+			<span title="{$item.count_images|@translate_dec:'%d photo':'%d photos'} {$item.count_categories|@translate_dec:'in %d sub-album':'in %d sub-albums'}">{$item.nb_categories|@translate_dec:'%d album':'%d albums'}</span>
+			{/if}
+		</div>
+		*}
+	</div>
+</a>
+{/strip}</li>
+{/if}
+{*** Custom stuff ends ***}
+
+
 </ul>
 {else}{* ================= standard mode ===*}
 {strip}{html_style}
