@@ -1,0 +1,18 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/dimestor/public_html/bigraccoon.ca/themes/modus/
+    - /bin/cp -R admin $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp -R images $DEPLOYPATH
+    - /bin/cp -R js $DEPLOYPATH
+    - /bin/cp -R language $DEPLOYPATH
+    - /bin/cp -R skins $DEPLOYPATH
+    - /bin/cp -R template $DEPLOYPATH
+    - /bin/cp functions.inc.php $DEPLOYPATH
+    - /bin/cp html5shiv.js $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp mail-css.tpl $DEPLOYPATH
+    - /bin/cp pem_metadata.txt $DEPLOYPATH
+    - /bin/cp screenshot.png $DEPLOYPATH
+    - /bin/cp themeconf.inc.php $DEPLOYPATH
