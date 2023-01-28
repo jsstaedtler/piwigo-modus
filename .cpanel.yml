@@ -13,6 +13,5 @@ deployment:
     - /bin/cp html5shiv.js $DEPLOYPATH
     - /bin/cp index.php $DEPLOYPATH
     - /bin/cp mail-css.tpl $DEPLOYPATH
-    - /bin/cp pem_metadata.txt $DEPLOYPATH
     - /bin/cp screenshot.png $DEPLOYPATH
     - /bin/cp themeconf.inc.php $DEPLOYPATH
