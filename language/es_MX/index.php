@@ -1,10 +1,8 @@
 <?php
 // +-----------------------------------------------------------------------+
-// | Piwigo - a PHP based photo gallery                                    |
+// | Lexiglot - A PHP based translation tool                               |
 // +-----------------------------------------------------------------------+
-// | Copyright(C) 2008-2013 Piwigo Team                  http://piwigo.org |
-// | Copyright(C) 2003-2008 PhpWebGallery Team    http://phpwebgallery.net |
-// | Copyright(C) 2002-2003 Pierrick LE GALL   http://le-gall.net/pierrick |
+// | Copyright(C) 2011-2013 Damien Sorel       http://www.strangeplanet.fr |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License as published by  |
@@ -20,17 +18,10 @@
 // | Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, |
 // | USA.                                                                  |
 // +-----------------------------------------------------------------------+
-$lang['%d album'] = '%d Album';
-$lang['%d albums'] = '%d Albuns';
-$lang['Explore'] = 'Explorar';
-$lang['modus_theme'] = 'Tema modus';
-$lang['%d pixels'] = '%d pixels';
-$lang['Album thumbnails'] = 'Album de miniaturas';
-$lang['Default size for thumbnails'] = 'Tamanho por defeito para miniaturas';
-$lang['Default size for thumbnails on high density display (retina)'] = 'Tamanho por defeito para miniaturas vistas em alta definição(retina)';
-$lang['Default sizes'] = 'Tamanhos por defeito';
-$lang['Modus theme config'] = 'Configuração do tema Modus';
-$lang['Skin'] = 'Matriz';
-$lang['Use square thumbs'] = 'Utilizar miniaturas quadradas';
-$lang['Display page banner'] = 'Mostrar página bandeira.';
-$lang['Admin'] = 'Admin';
+
+$url = '../';
+header( 'Request-URI: '.$url );
+header( 'Content-Location: '.$url );
+header( 'Location: '.$url );
+exit();
+?>
